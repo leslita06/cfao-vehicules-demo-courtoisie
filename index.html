@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta name="theme-color" content="#00438D">
+<title>Véhicules de démo et de courtoisie | CFAO Mobility</title>
+<link rel="icon" href="logo-cfao.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--b:#00438D;--g:#3E3D5C;--f:#F3F6FA;--l:#DDE3EC;--e:#2B2A35;--m:#6B6A80;--r:#B42318;--rb:#FDE8E7;--o:#A85A00;--ob:#FEF1DC;--v:#127A3E;--vb:#E2F4E9;--bb:#E3EDF9;--gb:#ECECF2}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+body{margin:0;font-family:'Work Sans',system-ui,-apple-system,sans-serif;color:var(--e);background:#fff;font-size:15px;line-height:1.4}
+.band{background:var(--g);color:#fff;text-align:center;font-size:13px;padding:7px 10px;font-weight:600;letter-spacing:.02em;position:sticky;top:0;z-index:20}
+header{max-width:1120px;margin:auto;padding:18px 16px 14px;display:flex;gap:20px;align-items:center;flex-wrap:wrap;border-bottom:3px solid var(--b)}
+header img{height:52px;width:auto;display:block}
+.kick{font-size:11.5px;letter-spacing:.08em;color:var(--m);text-transform:uppercase;font-weight:600}
+header h1{margin:2px 0 0;font-size:26px;color:var(--b);font-weight:800;letter-spacing:-.01em}
+header p{margin:3px 0 0;color:var(--g);font-size:13.5px}
+main{max-width:1120px;margin:auto;padding:16px}
+.kpis{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+.kpi{background:var(--f);border:0;border-radius:14px;padding:14px 10px 12px;text-align:center;border-top:5px solid var(--c);cursor:pointer;transition:transform .12s,box-shadow .12s;font:inherit;color:inherit}
+.kpi:hover,.kpi:focus-visible{transform:translateY(-2px);box-shadow:0 6px 16px rgba(0,67,141,.12);outline:none}
+.kpi .ic{font-size:20px;line-height:1}.kpi b{display:block;font-size:34px;color:var(--c);line-height:1.1;margin-top:4px;font-weight:800}
+.kpi span{display:block;font-weight:600;font-size:13.5px;margin-top:2px}
+.alert{margin:14px 0 0;background:var(--rb);color:var(--r);border-radius:12px;padding:10px 14px;font-weight:600;font-size:14px;display:flex;gap:10px;align-items:flex-start}
+nav{display:flex;gap:6px;margin:18px 0 12px;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;position:sticky;top:33px;background:#fff;z-index:10;padding:6px 0}
+nav::-webkit-scrollbar{display:none}
+nav button{flex:0 0 auto;border:1px solid var(--l);background:#fff;color:var(--g);border-radius:999px;padding:9px 15px;font:600 14px 'Work Sans',sans-serif;cursor:pointer}
+nav button.on{background:var(--b);color:#fff;border-color:var(--b)}
+nav button .n{display:inline-block;margin-left:6px;background:rgba(0,0,0,.08);border-radius:999px;padding:0 7px;font-size:12px}
+nav button.on .n{background:rgba(255,255,255,.25)}
+h2{font-size:18px;color:var(--b);margin:6px 0 4px}.sub{color:var(--m);font-size:13.5px;margin:0 0 10px}
+.filters{display:flex;gap:6px;flex-wrap:wrap;margin:6px 0 12px;align-items:center}
+.filters .lb{font-size:12px;color:var(--m);font-weight:600;margin-right:2px;text-transform:uppercase;letter-spacing:.05em}
+.chip{border:1px solid var(--l);background:#fff;border-radius:999px;padding:6px 12px;font:500 13.5px 'Work Sans',sans-serif;cursor:pointer;color:var(--e)}
+.chip.on{background:var(--g);color:#fff;border-color:var(--g)}.chip .n{opacity:.65;margin-left:5px}
+.tw{overflow-x:auto;border-radius:12px;border:1px solid var(--l)}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th{background:var(--b);color:#fff;text-align:left;padding:10px 10px;font-weight:600;white-space:nowrap}
+td{padding:10px;border-bottom:1px solid var(--l);vertical-align:middle}
+tbody tr:nth-child(even) td{background:#F8FAFC}tbody tr:last-child td{border-bottom:0}
+.num{text-align:right;white-space:nowrap}.strong{font-weight:700;color:var(--b)}.mut{color:var(--m);font-size:12.5px}
+.p{display:inline-block;padding:3px 10px;border-radius:999px;font-size:12.5px;font-weight:700;white-space:nowrap}
+.pr{background:var(--rb);color:var(--r)}.po{background:var(--ob);color:var(--o)}.pv{background:var(--vb);color:var(--v)}.pb{background:var(--bb);color:var(--b)}.pg{background:var(--gb);color:var(--g)}
+.bat{display:inline-flex;align-items:center;gap:6px;white-space:nowrap}.bat i{display:inline-block;width:46px;height:9px;border-radius:9px;background:var(--gb);overflow:hidden}.bat i s{display:block;height:100%;background:var(--c)}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px}
+.card{border:1px solid var(--l);border-radius:14px;padding:14px;background:#fff;border-left:5px solid var(--c,var(--b))}
+.card h3{margin:0;font-size:16px;color:var(--b)}.card .mut{margin:2px 0 8px}
+.card .row{display:flex;justify-content:space-between;font-size:13.5px;padding:3px 0;border-top:1px dashed var(--l)}
+.card .go{margin-top:10px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.st{background:var(--f);border-radius:14px;padding:14px}.st b{font-size:28px;color:var(--b);font-weight:800;display:block}.st .t{font-weight:700}.st .d{color:var(--g);font-size:13px;margin-top:6px}
+.aa{display:grid;grid-template-columns:1fr 1fr 1fr;border:1px solid var(--l);border-radius:14px;overflow:hidden;margin-top:14px}
+.aa div{padding:10px 12px;border-bottom:1px solid var(--l);font-size:14px}.aa .h{background:var(--b);color:#fff;font-weight:700}.aa .h.g{background:var(--g)}
+.aa .k{font-weight:700;color:var(--b)}.aa .bef{color:var(--r)}.aa .aft{color:var(--v);font-weight:600}
+.msg{background:var(--f);border-left:5px solid var(--b);border-radius:12px;padding:12px 14px;margin-bottom:12px}
+.msg h3{margin:0;font-size:15px;color:var(--b)}.msg .c{font-size:12.5px;color:var(--m);margin:2px 0 8px}
+.msg p{margin:0;font-size:14.5px;line-height:1.5}
+.msg .top{display:flex;justify-content:space-between;gap:8px;align-items:flex-start}
+.cp{border:1px solid var(--b);background:#fff;color:var(--b);border-radius:999px;padding:5px 12px;font:600 12.5px 'Work Sans',sans-serif;cursor:pointer;white-space:nowrap}
+.rules{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.rules div{background:var(--f);border-radius:14px;padding:14px}.rules h3{margin:0 0 6px;font-size:15px;color:var(--b)}
+.rules ul{margin:0;padding-left:18px;font-size:13.5px}.rules li{margin:4px 0}
+.note{font-size:12.5px;color:var(--m);margin-top:8px}
+footer{max-width:1120px;margin:22px auto 0;padding:14px 16px 26px;border-top:1px solid var(--l);font-size:12.5px;color:var(--m);display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px}
+.hide{display:none!important}
+@media (max-width:900px){.kpis{grid-template-columns:repeat(3,1fr)}.stats,.rules{grid-template-columns:1fr 1fr}}
+@media (max-width:640px){
+ body{font-size:15px}header{padding:14px 14px 12px;gap:10px}header img{height:40px}header h1{font-size:21px}
+ main{padding:12px}
+ .kpis{grid-template-columns:1fr 1fr;gap:8px}.kpi{padding:10px 6px}.kpi b{font-size:28px}.kpi span{font-size:12.5px}
+ .kpi:last-child{grid-column:span 2}
+ .stats,.rules{grid-template-columns:1fr}
+ .tw{border:0;overflow:visible}
+ table,thead,tbody,tr,td{display:block;width:100%}thead{display:none}
+ tbody tr{background:#fff;border:1px solid var(--l);border-radius:14px;margin-bottom:10px;padding:8px 12px}
+ tbody tr:nth-child(even) td{background:transparent}
+ td{border:none;padding:5px 0;display:flex;justify-content:space-between;gap:12px;text-align:right}
+ td::before{content:attr(data-l);color:var(--m);font-size:12.5px;text-align:left;flex:0 0 40%}
+ td.t{font-weight:700;font-size:16px;color:var(--b);justify-content:flex-start;text-align:left;border-bottom:1px solid var(--l);padding-bottom:7px;margin-bottom:3px}
+ td.t::before{display:none}.num{text-align:right}
+ .aa{grid-template-columns:1fr}.aa .h{display:none}.aa .k{background:var(--f)}
+ .aa .bef::before{content:"Aujourd'hui : ";color:var(--m);font-weight:400}.aa .aft::before{content:"Avec l'Expert : ";color:var(--m);font-weight:400}
+}
+</style></head><body>
+<div class="band">Données fictives de démonstration</div>
+<header><img src="logo-cfao.webp" alt="CFAO Mobility" width="176" height="52">
+<div><div class="kick">CFAO Mobility Côte d'Ivoire | Parc démo et courtoisie</div>
+<h1>Véhicules de démo et de courtoisie</h1>
+<p>20 véhicules : 12 de démonstration dont 5 BYD, 8 de courtoisie. Point du <b id="d"></b>, mis à jour chaque matin à 7 h.</p></div></header>
+<main>
+<div class="kpis" id="kpis"></div>
+<div class="alert" id="alert"></div>
+<nav id="tabs"></nav>
+
+<section id="v-jour"><h2>À faire aujourd'hui</h2><p class="sub">Retards d'abord, puis messages à envoyer et retours du jour.</p>
+<div class="filters" id="f-jour"></div>
+<div class="tw"><table><thead><tr><th>Véhicule</th><th>Client</th><th>Statut</th><th class="num">Retard</th><th>À faire</th></tr></thead><tbody id="t-jour"></tbody></table></div></section>
+
+<section id="v-parc" class="hide"><h2>Le parc</h2><p class="sub">Touchez un filtre : les compteurs suivent.</p>
+<div class="filters" id="f-usage"></div><div class="filters" id="f-site"></div><div class="filters" id="f-statut"></div>
+<div class="tw"><table><thead><tr><th>Véhicule</th><th>Usage</th><th>Site</th><th>Immatriculation</th><th class="num">Km</th><th>Charge</th><th>Statut</th><th>Révision</th><th>Peut sortir ?</th></tr></thead><tbody id="t-parc"></tbody></table></div></section>
+
+<section id="v-prets" class="hide"><h2>Prêts en cours</h2><p class="sub">Statut et action calculés chaque matin.</p>
+<div class="filters" id="f-prets"></div>
+<div class="tw"><table><thead><tr><th>Véhicule prêté</th><th>Client</th><th>Usage</th><th>Motif</th><th>Sorti le</th><th>Retour prévu</th><th>Réparation finie</th><th class="num">Retard</th><th>Statut</th></tr></thead><tbody id="t-prets"></tbody></table></div></section>
+
+<section id="v-rev" class="hide"><h2>Révisions</h2><p class="sub">Au premier atteint, km ou date. Une révision dépassée bloque la sortie.</p>
+<div class="filters" id="f-rev"></div>
+<div class="tw"><table><thead><tr><th>Véhicule</th><th>Énergie</th><th>Où est-il ?</th><th class="num">Km actuels</th><th class="num">Km restants</th><th>Prochaine date</th><th>État</th><th>Échéance</th></tr></thead><tbody id="t-rev"></tbody></table></div></section>
+
+<section id="v-byd" class="hide"><h2>BYD : prêtes pour un essai ?</h2><p class="sub">Pour le chef des ventes : charge, révision et disponibilité. Charge minimale pour un essai : 80 %.</p>
+<div class="cards" id="c-byd"></div>
+<h2 style="margin-top:22px">Ce que rapportent les essais BYD</h2><p class="sub">Septembre et octobre, suite notée à chaque retour.</p>
+<div class="filters" id="f-suite"></div>
+<div class="tw"><table><thead><tr><th>Véhicule</th><th>Client</th><th>Sorti le</th><th>Rendu le</th><th class="num">Km faits</th><th>Suite</th></tr></thead><tbody id="t-suite"></tbody></table></div></section>
+
+<section id="v-msg" class="hide"><h2>Messages clients</h2><p class="sub">Prêts à copier dans WhatsApp ou en SMS. Rien ne part sans le feu vert du chef d'atelier.</p>
+<div id="msgs"></div><h2 style="margin-top:20px">Modèles</h2><p class="sub">Les quatre situations du parc. Les mots entre guillemets se remplacent.</p><div id="mods"></div></section>
+
+<section id="v-bilan" class="hide"><h2>Septembre et octobre</h2><p class="sub" id="bilan-sub"></p>
+<div class="stats" id="stats"></div>
+<h2 style="margin-top:22px">Avant, après</h2>
+<div class="aa" id="aa"></div><p class="note">Durées d'aujourd'hui : estimation, à mesurer avec l'équipe du parc.</p>
+<h2 style="margin-top:22px">Règles proposées</h2><p class="sub">À valider par la direction après-vente avant application.</p>
+<div class="rules" id="rules"></div></section>
+</main>
+<footer><span>Données fictives de démonstration | Proposé par Yelema, maquette non publiée</span><span>Mêmes chiffres que le classeur du suivi</span></footer>
+<script src="data.js"></script>
+<script>
+const $=id=>document.getElementById(id);
+const fr=n=>Number(n).toLocaleString('fr-FR').replace(/\u202f|\u00a0/g,' ');
+const dt=s=>s&&/^\d{4}-/.test(s)?s.slice(8,10)+'/'+s.slice(5,7):(s||'');
+const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const TONE={'En retard':'pr','Dépassée':'pr','Bloqué : révision':'pr','Voiture prête':'po','Bientôt':'po','À recharger':'po',"Retour aujourd'hui":'pb','En prêt':'pb',"À l'atelier":'pg','Atelier':'pg','Dans les temps':'pv','À jour':'pv','Oui':'pv','Disponible':'pv','Commande signée':'pv','Devis en cours':'po','Sans suite':'pg','Démonstration':'pb','Courtoisie':'pg'};
+const pill=s=>`<span class="p ${TONE[s]||'pg'}">${esc(s)}</span>`;
+const bat=c=>{if(c==null||c==='-')return '<span class="mut">Sans objet</span>';const col=c>=80?'var(--v)':c>=60?'var(--o)':'var(--r)';return `<span class="bat" style="--c:${col}"><i><s style="width:${c}%"></s></i>${c} %</span>`};
+const name=p=>`${p[0]} ${p[1]} ${p[2]}`;
+$('d').textContent=D.date.split('-').reverse().join('/');
+// KPI
+const K=D.kpi, IC=['🚗','⏰','🔧','💬','⚡'], COL=['var(--b)','var(--r)','var(--o)','var(--g)','var(--v)'], GO=['prets','jour','rev','msg','byd'];
+$('kpis').innerHTML=K.map((k,i)=>`<button class="kpi" style="--c:${COL[i]}" data-i="${i}"><div class="ic">${IC[i]}</div><b>${esc(k[0])}</b><span>${esc(k[1])}</span></button>`).join('');
+const late=D.prets.filter(p=>p[11]>0).sort((a,b)=>b[11]-a[11]);
+$('alert').innerHTML=`<span>⚠️</span><span>La voiture de ${late[0][2]} est prête depuis ${late[0][11]} jours, mais la ${late[0][1]} (${late[0][0]}) n'est pas rentrée. Appel à passer ce matin.</span>`;
+// Tabs
+const S={jour:'Tous',usage:'Tous',site:'Tous',statut:'Tous',prets:'Tous',rev:'À surveiller',suite:'Tous'};
+const JOUR=D.prets.filter(p=>['En retard','Voiture prête',"Retour aujourd'hui"].includes(p[12]));
+const REVW=D.ent.filter(e=>e[10]==='Dépassée'||e[10]==='Bientôt');
+const BH=D.hist.filter(h=>/BYD/.test(h[0]));
+const TABS=[['jour',"Aujourd'hui",JOUR.length],['parc','Parc',D.parc.length],['prets','Prêts',D.prets.length],['rev','Révisions',REVW.length],['byd','BYD',5],['msg','Messages',D.msgs.length],['bilan','Bilan',null]];
+$('tabs').innerHTML=TABS.map(t=>`<button data-t="${t[0]}">${t[1]}${t[2]!=null?`<span class="n">${t[2]}</span>`:''}</button>`).join('');
+function show(t){TABS.forEach(x=>$('v-'+x[0]).classList.toggle('hide',x[0]!==t));document.querySelectorAll('#tabs button').forEach(b=>b.classList.toggle('on',b.dataset.t===t));}
+$('tabs').onclick=e=>{const b=e.target.closest('button');if(b)show(b.dataset.t)};
+function chips(id,label,opts,key,cb){const el=$(id);el.innerHTML=(label?`<span class="lb">${label}</span>`:'')+opts.map(o=>`<button class="chip${S[key]===o[0]?' on':''}" data-v="${esc(o[0])}">${esc(o[1]??o[0])}<span class="n">${o[2]}</span></button>`).join('');el.onclick=e=>{const b=e.target.closest('.chip');if(!b)return;S[key]=b.dataset.v;cb();}}
+// Aujourd'hui
+function rJour(){const sts=['Tous','En retard','Voiture prête',"Retour aujourd'hui"];
+ chips('f-jour','',sts.map(s=>[s,s,s==='Tous'?JOUR.length:JOUR.filter(p=>p[12]===s).length]),'jour',rJour);
+ const L=JOUR.filter(p=>S.jour==='Tous'||p[12]===S.jour).sort((a,b)=>b[11]-a[11]||sts.indexOf(a[12])-sts.indexOf(b[12]));
+ $('t-jour').innerHTML=L.map(p=>`<tr><td class="t" data-l="Véhicule">${esc(p[0]+' '+p[1])}</td><td data-l="Client">${esc(p[2])}</td><td data-l="Statut">${pill(p[12])}</td><td class="num strong" data-l="Retard">${p[11]?p[11]+' j':'0'}</td><td data-l="À faire">${esc(p[13])}</td></tr>`).join('');}
+// Parc
+function rParc(){const P=D.parc;const f=(k,v)=>x=>v==='Tous'||(k==='usage'?x[4]:k==='site'?x[5]:x[12])===v;
+ const base=k=>P.filter(x=>['usage','site','statut'].filter(z=>z!==k).every(z=>f(z,S[z])(x)));
+ const opt=(k,idx,vals)=>[['Tous','Tous',base(k).length]].concat(vals.map(v=>[v,v,base(k).filter(x=>x[idx]===v).length]));
+ chips('f-usage','Usage',opt('usage',4,['Démonstration','Courtoisie']),'usage',rParc);
+ chips('f-site','Site',opt('site',5,['Abidjan','Showroom aéroport','Yamoussoukro','Bouaké']).filter(o=>o[0]==='Tous'||P.some(x=>x[5]===o[0])),'site',rParc);
+ chips('f-statut','Statut',opt('statut',12,['Disponible','En prêt','Atelier']),'statut',rParc);
+ const L=P.filter(x=>f('usage',S.usage)(x)&&f('site',S.site)(x)&&f('statut',S.statut)(x));
+ $('t-parc').innerHTML=L.map(x=>`<tr><td class="t" data-l="Véhicule">${esc(name(x))}</td><td data-l="Usage">${pill(x[4])}</td><td data-l="Site">${esc(x[5])}</td><td data-l="Immatriculation">${esc(x[6])}</td><td class="num" data-l="Km">${fr(x[8])}</td><td data-l="Charge">${bat(x[10])}</td><td data-l="Statut">${pill(x[12])}</td><td data-l="Révision">${pill(x[13])}</td><td data-l="Peut sortir ?">${pill(x[14])}</td></tr>`).join('')||'<tr><td>Aucun véhicule pour ce filtre</td></tr>';}
+// Prêts
+function rPrets(){const P=D.prets;const sts=['Tous','En retard','Voiture prête',"Retour aujourd'hui",'Dans les temps'];
+ chips('f-prets','',sts.map(s=>[s,s,s==='Tous'?P.length:P.filter(p=>p[12]===s).length]),'prets',rPrets);
+ const L=P.filter(p=>S.prets==='Tous'||p[12]===S.prets);
+ $('t-prets').innerHTML=L.map(p=>`<tr><td class="t" data-l="Véhicule">${esc(p[0]+' '+p[1])}</td><td data-l="Client">${esc(p[2])}${p[5]&&p[5]!=='-'?`<div class="mut">Sa voiture : ${esc(p[5])}</div>`:''}</td><td data-l="Usage">${pill(p[4])}</td><td data-l="Motif">${esc(p[6])}</td><td data-l="Sorti le">${dt(p[7])}</td><td data-l="Retour prévu">${dt(p[8])}</td><td data-l="Réparation finie">${p[9]?dt(p[9]):'<span class="mut">Non</span>'}</td><td class="num strong" data-l="Retard">${p[11]?p[11]+' j':'0'}</td><td data-l="Statut">${pill(p[12])}</td></tr>`).join('');}
+// Révisions
+function rRev(){const E=D.ent;const sts=['À surveiller','Dépassée','Bientôt',"À l'atelier",'À jour','Tous'];
+ const m=(s,e)=>s==='Tous'||(s==='À surveiller'?(e[10]==='Dépassée'||e[10]==='Bientôt'):e[10]===s);
+ chips('f-rev','',sts.map(s=>[s,s,E.filter(e=>m(s,e)).length]),'rev',rRev);
+ const L=E.filter(e=>m(S.rev,e)).sort((a,b)=>a[7]-b[7]);
+ $('t-rev').innerHTML=L.map(e=>`<tr><td class="t" data-l="Véhicule">${esc(e[0]+' '+e[1])}</td><td data-l="Énergie">${esc(e[2])}</td><td data-l="Où est-il ?">${esc(e[11])}</td><td class="num" data-l="Km actuels">${fr(e[3])}</td><td class="num strong" data-l="Km restants" style="color:${e[7]<0?'var(--r)':'var(--b)'}">${fr(e[7])}</td><td data-l="Prochaine date">${esc(e[8]?e[8].split('-').reverse().join('/'):'')}</td><td data-l="État">${pill(e[10])}</td><td data-l="Échéance">${esc(e[12])}</td></tr>`).join('');}
+// BYD
+function rByd(){const B=D.parc.filter(x=>x[1]==='BYD');
+ $('c-byd').innerHTML=B.map(x=>{const c=x[14]==='Oui'?'var(--v)':x[14]==='En prêt'?'var(--b)':x[14]==='À recharger'?'var(--o)':'var(--r)';
+  const n=BH.filter(h=>h[0].startsWith(x[0]));const cmd=n.filter(h=>h[8]==='Commande signée').length;
+  return `<div class="card" style="--c:${c}"><h3>${esc(x[0]+' '+x[1]+' '+x[2])}</h3><div class="mut">${esc(x[5])} | ${esc(x[6])}</div>
+  <div class="row"><span>Charge</span>${bat(x[10])}</div><div class="row"><span>Km</span><b>${fr(x[8])}</b></div><div class="row"><span>Révision</span>${pill(x[13])}</div><div class="row"><span>Essais sept. et oct.</span><b>${n.length} dont ${cmd} commande${cmd>1?'s':''}</b></div>
+  <div class="go">Peut sortir ? ${pill(x[14])}</div></div>`}).join('');
+ const sts=['Tous','Commande signée','Devis en cours','Sans suite'];
+ chips('f-suite','',sts.map(s=>[s,s,s==='Tous'?BH.length:BH.filter(h=>h[8]===s).length]),'suite',rByd);
+ $('t-suite').innerHTML=BH.filter(h=>S.suite==='Tous'||h[8]===S.suite).map(h=>`<tr><td class="t" data-l="Véhicule">${esc(h[0].replace(' (',' ').replace(')',''))}</td><td data-l="Client">${esc(h[1])}</td><td data-l="Sorti le">${dt(h[2])}</td><td data-l="Rendu le">${dt(h[4])}</td><td class="num" data-l="Km faits">${fr(h[6])}</td><td data-l="Suite">${pill(h[8])}</td></tr>`).join('');}
+// Messages
+$('msgs').innerHTML=D.msgs.map((m,i)=>`<div class="msg"><div class="top"><div><h3>${esc(m[1])}</h3><div class="c">${esc(m[0])} | ${esc(m[3])} | ${esc(m[2])}</div></div><button class="cp" data-i="${i}">Copier</button></div><p>${esc(m[4])}</p></div>`).join('');
+$('mods').innerHTML=D.mods.map(m=>`<div class="msg" style="border-left-color:var(--g)"><h3 style="color:var(--g)">${esc(m[0])}</h3><p style="margin-top:6px">${esc(m[1])}</p></div>`).join('');
+$('msgs').onclick=e=>{const b=e.target.closest('.cp');if(!b)return;const t=D.msgs[b.dataset.i][4];(navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(()=>{b.textContent='Copié';setTimeout(()=>b.textContent='Copier',1500)}).catch(()=>{b.textContent='Sélectionnez le texte'});};
+// Bilan
+$('bilan-sub').textContent=`${D.histN} prêts terminés, dont ${BH.length} essais BYD.`;
+$('stats').innerHTML=D.stats.map(s=>`<div class="st"><div class="t">${esc(s[0])}</div><b>${esc(s[1])}</b><div class="mut">${esc(s[2])}</div><div class="d">${esc(s[3])}</div></div>`).join('');
+$('aa').innerHTML='<div class="h"></div><div class="h g">Aujourd\'hui</div><div class="h">Avec l\'Expert</div>'+D.aa.map(a=>`<div class="k">${esc(a[0])}</div><div class="bef">${esc(a[1])}</div><div class="aft">${esc(a[2])}</div>`).join('');
+$('rules').innerHTML=D.regles.map(r=>`<div><h3>${esc(r[0])}</h3><ul>${r[1].map(x=>`<li>${esc(x)}</li>`).join('')}</ul></div>`).join('');
+// KPI clic
+$('kpis').onclick=e=>{const k=e.target.closest('.kpi');if(!k)return;const i=+k.dataset.i;
+ if(i===1){S.jour='En retard';rJour();} if(i===2){S.rev='Dépassée';rRev();}
+ show(GO[i]);$('tabs').scrollIntoView({behavior:'smooth'});};
+rJour();rParc();rPrets();rRev();rByd();
+const h=location.hash.slice(1);show(TABS.some(t=>t[0]===h)?h:'jour');
+</script></body></html>
